@@ -1,5 +1,6 @@
 package com.splitnotsowise.command;
 
+import com.splitnotsowise.exceptions.InvalidArgumentCountException;
 import com.splitnotsowise.communication.Server;
 
 import java.io.IOException;
@@ -10,43 +11,57 @@ import java.util.HashSet;
 
 public class CreateGroupCommand implements Command {
 
+    private static final int INDEX_OF_GROUP_NAME = 1;
+    private static final int START_INDEX_OF_GROUP_MEMBERS = 2;
+
     @Override
-    public void execute(String clientUsername, String[] content, Server server, PrintWriter writer) {
-        String[] tokens = content.split(" ");
+    public void execute(String clientUsername, String[] content, Server server, PrintWriter writer) throws InvalidArgumentCountException {
 
-        int index = 0;
-        if (tokens.length >= 4) {
-            String name = tokens[index++];
-            HashSet<String> members = new HashSet<>();
+        if (!server.containsUser(clientUsername)){
+            writer.println("You should register first!");
+            return;
+        }
 
-            for (int i = index; i < tokens.length; i++) {
-                members.add(tokens[i]);
-            }
+        if (content.length < 3) {
+            throw new InvalidArgumentCountException(clientUsername);
 
-            if (server.containsGroup(name)) {
+        } else {
+            String groupName = content[INDEX_OF_GROUP_NAME];
+
+            if (server.containsGroup(groupName)) {
                 writer.println("Group name already used");
 
             } else {
-                server.addGroup(name, members);
+                HashSet<String> groupMembers = new HashSet<>();
+
+
+                groupMembers.add(clientUsername);
+                for (int i = START_INDEX_OF_GROUP_MEMBERS; i < content.length; i++) {
+                    if (!server.containsUser(content[i])){
+                        writer.println(content[i]+ " is not registered user. Group can't be created" );
+                        return;
+                    }
+                    groupMembers.add(content[i]);
+                }
+
+                server.addGroup(groupName, groupMembers);
 
                 try {
                     String path = "resources\\com.splitnotsowise.communication.Server\\Groups";
                     Files.createDirectories(Paths.get(path));
                 } catch (IOException e) {
                     e.printStackTrace();
-                    System.err.println("could not create a Groups directory");
+                    System.err.println("Could not create a Groups directory");
                 }
 
-                String path = "resources\\com.splitnotsowise.communication.Server\\Groups\\" + name + "Group.txt";
-                for (String member : members) {
-                    server.addUsernameToFile(path, member);
+                String filePath = "resources\\com.splitnotsowise.communication.Server\\Groups\\" + groupName + "Group.txt";
+                for (String member : groupMembers) {
+                    server.addUsernameToFile(filePath, member);
                 }
 
-                writer.println("Group " + name + " created successfully");
+                writer.println("Group " + groupName + " was created successfully");
             }
 
-        } else { //TODO this is not correct
-            writer.println("Invalid input - groups must contain at least 3 people");
         }
 
     }

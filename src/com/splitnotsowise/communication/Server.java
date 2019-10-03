@@ -3,7 +3,6 @@ package com.splitnotsowise.communication;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,14 +15,14 @@ import java.nio.file.Paths;
 import java.util.HashSet;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.splitnotsowise.User;
+import com.splitnotsowise.utilities.User;
 
 public class Server {
 
     private static final int PORT = 8080;
 
     private static HashSet<User> registeredUsers = new HashSet<>();
-    private static ConcurrentHashMap<String, HashSet<String>> friendLists = new ConcurrentHashMap<>();
+    private static ConcurrentHashMap<String, HashSet<String>> contactLists = new ConcurrentHashMap<>();
     private static ConcurrentHashMap<String, HashSet<String>> groups = new ConcurrentHashMap<>();
 
     public static void main(String[] args) {
@@ -34,7 +33,8 @@ public class Server {
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             System.out.printf("server is running on localhost:%d%n", PORT);
 
-            retrieveRegisteredUsers();
+            updateRegisteredUsersInFile();
+            updateContactListsInFile();
             while (true) {
                 Socket socket = serverSocket.accept();
                 System.out.println("com.splitnotsowise.communication.Client " + socket.getInetAddress() + " connected to server");
@@ -57,7 +57,7 @@ public class Server {
                         writer.println("Connection successful. You are connected as a guest, you must register to use SplitWise");
                     }
 
-                    ClientConnectionHandler runnable = new ClientConnectionHandler(socket, username, this);
+                    ClientConnectionRunnable runnable = new ClientConnectionRunnable(socket, username, this);
                     new Thread(runnable).start();
                 }
             }
@@ -68,8 +68,50 @@ public class Server {
 
     }
 
-    private void retrieveRegisteredUsers() {
-        String path = new String("resources\\com.splitnotsowise.communication.Server");
+    private void updateContactListsInFile() {
+        for (User user:registeredUsers){
+            String path = "resources\\com.splitnotsowise.communication.Server\\"+user.getUsername();
+
+            try {
+                Files.createDirectories(Paths.get(path));
+            } catch (IOException e1) {
+                e1.getMessage();
+            }
+
+            File file = new File("resources\\com.splitnotsowise.communication.Server\\"+user.getUsername()+"\\contactList.txt");
+
+            if (file.exists()) {
+                try (FileReader fr = new FileReader(file.getAbsoluteFile());
+                     BufferedReader bufferedReader = new BufferedReader(fr)) {
+
+                    if (!file.exists()) {
+                        file.createNewFile();
+
+                    } else {
+                        String line;
+
+                        while ((line = bufferedReader.readLine()) != null) {
+                            String[] tokens = line.split(" ");
+
+                            String contactUsername = tokens[1];
+
+                            addContact(user.getUsername(),contactUsername);
+                        }
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+
+                }
+            }
+
+
+
+        }
+    }
+
+    private void updateRegisteredUsersInFile() {
+        String path = "resources\\com.splitnotsowise.communication.Server";
 
         try {
             Files.createDirectories(Paths.get(path));
@@ -87,7 +129,7 @@ public class Server {
                     file.createNewFile();
 
                 } else {
-                    String line = new String("");
+                    String line;
 
                     while ((line = bufferedReader.readLine()) != null) {
                         String[] tokens = line.split(" ");
@@ -99,14 +141,14 @@ public class Server {
                     }
                 }
 
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-
             } catch (IOException e) {
                 e.printStackTrace();
+
             }
         }
     }
+
+
 
     public void addRegisteredUser(User newUser) {
         registeredUsers.add(newUser);
@@ -115,8 +157,6 @@ public class Server {
     public boolean containsUser(String username) {
         for (User user : registeredUsers) {
             if (user.getUsername().equals(username)) {
-                System.out.println("user: " + user.getUsername());
-                System.out.println("username: " + username);
                 return true;
             }
         }
@@ -124,8 +164,8 @@ public class Server {
         return false;
     }
 
-    public boolean containsAccount(String username, String password) {
-        return getRegisteredUser(username).hasPassword(password);
+    public boolean isAccountValid(String username, String password) {
+        return getRegisteredUser(username).isPasswordCorrect(password);
     }
 
     public User getRegisteredUser(String username) {
@@ -134,27 +174,45 @@ public class Server {
                 return user;
             }
         }
+        System.out.println("User with this username doesn't exist");
         return null;
     }
 
-    public void createFriendList(String username) {
-        friendLists.put(username, new HashSet<>());
+    public void createContactList(String username) {
+        contactLists.put(username, new HashSet<>());
     }
 
     public boolean areFriends(String username, String friend) {
-        for (String friendUsername : friendLists.get(username)) {
-            if (friendUsername.equals(friend)) {
-                return true;
+        if (contactLists.isEmpty()){
+            return false;
+        }
+        try {
+            for (String friendUsername : contactLists.get(username)) {
+                if (friendUsername.equals(friend)) {
+                    return true;
+                }
             }
+
+            return false;
+
+        } catch (NullPointerException e){
+            return false;
         }
 
-        return false;
     }
 
-    public void addFriend(String username, String friend) {
-        HashSet<String> friendList1 = friendLists.get(username);
-        friendList1.add(friend);
-        friendLists.put(username, friendList1);
+    public void addContact(String username, String friend) {
+
+        try {
+            HashSet<String> contactList1 = contactLists.get(username);
+            contactList1.add(friend);
+            contactLists.put(username, contactList1);
+        }catch (NullPointerException e){
+            HashSet<String> newContactList = new HashSet<>();
+            newContactList.add(friend);
+            contactLists.put(username,newContactList);
+        }
+
     }
 
     public void addUsernameToFile(String path, String username) {
@@ -186,7 +244,7 @@ public class Server {
         return groups.get(groupName);
     }
 
-    public HashSet<String> getFriendList(String username) {
-        return friendLists.get(username);
+    public HashSet<String> getContactList(String username) {
+        return contactLists.get(username);
     }
 }

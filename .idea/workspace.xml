@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="557c0edc-e152-4d98-9e8c-f5efc0d379e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/ClaimReceivedPaymentCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/ClaimReceivedPaymentFromGroupCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/splitnotsowise/exceptions/InvalidArgumentCountException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Split(notSo)Wise.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Split(notSo)Wise.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/utilities/CommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/Exceptions/InvalidInputException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/InputHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/utilities/Obligation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/utilities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/AddFriendCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/AddFriendCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/CreateGroupCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/CreateGroupCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/GetPayedCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/GetStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/GetStatusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/PayedGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/RegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/ShowHistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/ShowHistoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/Split.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/SplitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/command/SplitGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/command/SplitWithGroupCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/communication/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/communication/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientConnectionRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/communication/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/communication/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/splitnotsowise/communication/ServerConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientRunnable.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="222" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/utilities/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+              <folding>
+                <element signature="method#User#0;class#User#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/utilities/Obligation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/UserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/SplitWithGroupCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientRunnable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/com.splitnotsowise.communication.Server/gosho/contactList.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/communication/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="935">
+              <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/communication/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5008#5009#0" expanded="true" />
+                <element signature="e#5052#5053#0" expanded="true" />
+                <element signature="e#7320#7321#0" expanded="true" />
+                <element signature="e#7367#7368#0" expanded="true" />
+                <element signature="e#7433#7434#0" expanded="true" />
+                <element signature="e#7474#7475#0" expanded="true" />
+                <element signature="e#7531#7532#0" expanded="true" />
+                <element signature="e#7575#7576#0" expanded="true" />
+                <element signature="e#7637#7638#0" expanded="true" />
+                <element signature="e#7686#7687#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/ClaimReceivedPaymentFromGroupCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>=&gt;</find>
+      <find>obligationHistory</find>
+      <find>connection</find>
+      <find>Connected successfully</find>
+      <find>system</find>
+      <find>user:</find>
+      <find>username:</find>
+      <find>friendlist</find>
+      <find>InvalidInput</find>
+      <find>catch</find>
+      <find>register</find>
+      <find>addRegistered</find>
+      <find>addRegister</find>
+      <find>friendlis</find>
+      <find>retrieve</find>
+      <find>registeredusers.txt</find>
+      <find>friendList</find>
+      <find>FriendList</find>
+      <find>update</find>
+      <find>contactlist1</find>
+      <find>nullpointer</find>
+      <find>nullpoi</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>contactList</replace>
+      <replace>ContactList</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/Status.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/Login.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/Payed.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/GetPayedCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/PayedGroup.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/Registration.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/Split.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/SplitGroup.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/communication/ServerConnectionHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientConnectionHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/CommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/User.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/Payment.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/SplitWithGroupCommandTest.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/InputHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/InputVerifier.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/RecievedPaymentCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/ReceivedPaymentCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/RecievedPaymentFromGroupCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/utilities/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/utilities/ObligationTest.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/AddFriendCommandTest.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/ClaimReceivedPaymentCommandTest.java" />
+        <option value="$PROJECT_DIR$/test/ClaimReceivedPaymentCommandTest.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/RegisterCommandTest.java" />
+        <option value="$PROJECT_DIR$/test/RegisterCommandTest.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/communication/Client.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/HelpCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/Exceptions/InvalidInputException.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientConnectionRunnable.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/Command.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/SplitCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/SplitWithGroupCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/exceptions/InvalidArgumentCountException.java" />
+        <option value="$PROJECT_DIR$/test/UserTest.java" />
+        <option value="$PROJECT_DIR$/test/AddFriendCommandTest.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/AddFriendCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/RegisterCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/ClaimReceivedPaymentFromGroupCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/ClaimReceivedPaymentCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/ShowHistoryCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/GetStatusCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/communication/Server.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/CreateGroupCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/utilities/CommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/command/LoginCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/utilities/User.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/utilities/Obligation.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientRunnable.java" />
+        <option value="$PROJECT_DIR$/src/UserTestTest.java" />
+        <option value="$PROJECT_DIR$/src/com/splitnotsowise/utilities/car.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
+    <option name="y" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Split(notSo)Wise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Split(notSo)Wise" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.splitnotsowise.communication.Client" />
+      <module name="Split(notSo)Wise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.splitnotsowise.communication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.splitnotsowise.communication.Server" />
+      <module name="Split(notSo)Wise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.splitnotsowise.communication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Split(notSo)Wise" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.testPrintNotifications" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Split(notSo)Wise" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="testPrintNotifications" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.testReceivePaymentFromFriend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Split(notSo)Wise" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="testReceivePaymentFromFriend" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="JUnit.UserTest.testReceivePaymentFromFriend" />
+      <item itemvalue="JUnit.UserTest" />
+      <item itemvalue="JUnit.UserTest.testPrintNotifications" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.UserTest.testPrintNotifications" />
+        <item itemvalue="JUnit.UserTest.testReceivePaymentFromFriend" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="557c0edc-e152-4d98-9e8c-f5efc0d379e9" name="Default Changelist" comment="" />
+      <created>1567341447122</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567341447122</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="UserTest_testReceivePaymentFromFriend - 2019.09.04 at 10h 38m 50s.xml">
+      <configuration name="UserTest.testReceivePaymentFromFriend" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testReceivePaymentFromFriend - 2019.09.04 at 10h 41m 18s.xml">
+      <configuration name="UserTest.testReceivePaymentFromFriend" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest - 2019.09.04 at 10h 41m 30s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest - 2019.09.04 at 10h 47m 59s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testPrintNotifications - 2019.09.04 at 10h 48m 51s.xml">
+      <configuration name="UserTest.testPrintNotifications" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testPrintNotifications - 2019.09.04 at 10h 49m 55s.xml">
+      <configuration name="UserTest.testPrintNotifications" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest - 2019.09.04 at 10h 51m 55s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest - 2019.09.04 at 10h 53m 34s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest - 2019.09.04 at 10h 56m 31s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest - 2019.09.04 at 11h 00m 59s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31351352" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32892805" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36563876" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32844576" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32991204" />
+      <window_info anchor="bottom" id="EvoSuite" order="11" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32972974" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientConnectionRunnable.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientConnectionRunnable.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Split_notSo_Wise$AddFriendCommandTest.ic" NAME="AddFriendCommandTest Coverage Results" MODIFIED="1567515615898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Split_notSo_Wise$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1567584043453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="1849" column="18" selection-start-line="1849" selection-start-column="18" selection-end-line="1849" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="834" column="19" selection-start-line="834" selection-start-column="19" selection-end-line="834" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/PayedGroup.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/com/splitnotsowise/command/SplitWithGroupCommandTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/SplitWithGroupCommandTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/utilities/InputVerifier.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/utilities/ObligationTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/com/splitnotsowise/command/AddFriendCommandTest.java" />
+    <entry file="file://$PROJECT_DIR$/test/ClaimReceivedPaymentCommandTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="657" column="48" selection-start-line="657" selection-start-column="48" selection-end-line="657" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="236" column="23" selection-start-line="236" selection-start-column="23" selection-end-line="236" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/AddFriendCommandTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/exceptions/InvalidArgumentCountException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="82" lean-forward="true" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/RegisterCommandTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/SplitCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/com.splitnotsowise.communication.Server/registeredUsers.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/RegisterCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="947" column="23" selection-start-line="947" selection-start-column="23" selection-end-line="947" selection-end-column="23" />
+          <folding>
+            <element signature="e#32809#32810#0" expanded="true" />
+            <element signature="e#32852#32853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/AddFriendCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/com.splitnotsowise.communication.Server/Groups/familyGroup.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/ClaimReceivedPaymentCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/ShowHistoryCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/GetStatusCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/CreateGroupCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/utilities/CommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/HelpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/LoginCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientConnectionRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="964">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/utilities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="method#User#0;class#User#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/utilities/Obligation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/SplitWithGroupCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/communication/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/command/ClaimReceivedPaymentFromGroupCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/communication/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5008#5009#0" expanded="true" />
+            <element signature="e#5052#5053#0" expanded="true" />
+            <element signature="e#7320#7321#0" expanded="true" />
+            <element signature="e#7367#7368#0" expanded="true" />
+            <element signature="e#7433#7434#0" expanded="true" />
+            <element signature="e#7474#7475#0" expanded="true" />
+            <element signature="e#7531#7532#0" expanded="true" />
+            <element signature="e#7575#7576#0" expanded="true" />
+            <element signature="e#7637#7638#0" expanded="true" />
+            <element signature="e#7686#7687#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserTestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/utilities/car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splitnotsowise/communication/ClientRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/com.splitnotsowise.communication.Server/gosho/contactList.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

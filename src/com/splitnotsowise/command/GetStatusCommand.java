@@ -1,6 +1,6 @@
 package com.splitnotsowise.command;
 
-import com.splitnotsowise.User;
+import com.splitnotsowise.utilities.User;
 import com.splitnotsowise.communication.Server;
 
 import java.io.PrintWriter;
@@ -11,12 +11,20 @@ public class GetStatusCommand implements Command {
     @Override
     public void execute(String clientUsername, String[] content, Server server, PrintWriter writer) {
 
-        writer.println("Friends:");
+        if (!server.containsUser(clientUsername)) {
+            writer.println("You should register first!");
+            return;
+        }
+        User currentUser = server.getRegisteredUser(clientUsername);
+        HashSet<String> friends = server.getContactList(clientUsername);
+        //writer.println("Friends:");
+        if (friends.isEmpty()) {
+            writer.println("You don't have any obligations");
+            return;
+        }
 
-        User current = server.getRegisteredUser(clientUsername);
-        HashSet<String> friends = server.getFriendList(clientUsername);
         for (String friend : friends) {
-            double obligation = current.getMyFriendObligationTo(friend);
+            double obligation = currentUser.getCurrentUserObligationsToFriend(friend);
 
             if (obligation > 0) {
                 writer.println("You owe " + friend + " " + obligation);
@@ -25,16 +33,17 @@ public class GetStatusCommand implements Command {
             }
         }
 
-        writer.println("Groups:"); //TODO this doesn't work
+        //writer.println("Groups:");
         for (String friend : friends) {
-            double obligation = current.getMyGroupObligationTo(friend);
+            double obligation = currentUser.getUsersObligationToGroupMember(friend);
 
             if (obligation > 0) {
-                writer.println("You owe " + friend + " " + obligation);
+                writer.println("You owe " + friend + " " + obligation + "for group stuff");
             } else if (obligation < 0) {
-                writer.println(friend + " owes you " + (-obligation));
+                writer.println(friend + " owes you " + (-obligation) + "for group stuff");
             }
         }
     }
-
 }
+
+

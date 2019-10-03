@@ -7,29 +7,31 @@ import java.util.Scanner;
 
 public class Client {
     private PrintWriter writer;
+    private static final int INDEX_OF_COMMAND = 0;
+    private static final int INDEX_OF_HOST = 1;
+    private static final int INDEX_OF_PORT = 2;
+    private static final int INDEX_OF_USERNAME = 3;
 
     public static void main(String[] args) throws IOException {
         new Client().run();
     }
 
-    public void run() throws IOException {
+    public void run() {
+        System.out.println("To connect write this command: connect <host> <port> <username> ");
         try (Scanner scanner = new Scanner(System.in)) {
             while (true) {
-                String line = scanner.nextLine();
+                String input = scanner.nextLine();
 
-                int index = 0;
-
-                String[] tokens = line.split(" ");
-                String command = tokens[index++];
+                String[] tokens = input.split(" ");
+                String command = tokens[INDEX_OF_COMMAND];
 
                 if ("connect".equals(command)) {
                     if (tokens.length == 4) {
-                        String host = tokens[index++];
-                        int port = Integer.parseInt(tokens[index++]);
-                        String username = tokens[index++];
+                        String host = tokens[INDEX_OF_HOST];
+                        int port = Integer.parseInt(tokens[INDEX_OF_PORT]);
+                        String username = tokens[INDEX_OF_USERNAME];
 
                         connect(host, port, username);
-
                     } else {
                         System.out.println("Invalid input");
                     }
@@ -40,9 +42,7 @@ public class Client {
                     break;
 
                 } else {
-                    writer.println(line);
-                    continue;
-
+                    writer.println(input);
                 }
 
             }
@@ -52,17 +52,15 @@ public class Client {
     private void connect(String host, int port, String username) {
         try {
             Socket socket = new Socket(host, port);
-            System.out.println("Connected successfully");
 
             writer = new PrintWriter(socket.getOutputStream(), true);
             writer.println("connect " + username);
 
-            ServerConnectionHandler runnable = new ServerConnectionHandler(socket);
-            new Thread(runnable).start();
+            ClientRunnable clientRunnable = new ClientRunnable(socket);
+            new Thread(clientRunnable).start();
 
         } catch (IOException e) {
             System.err.println("Cannot connect to server on localhost:8080, make sure that the server is started");
-            System.out.println();
         }
 
     }

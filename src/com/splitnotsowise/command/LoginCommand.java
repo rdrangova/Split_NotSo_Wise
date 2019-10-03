@@ -1,32 +1,38 @@
 package com.splitnotsowise.command;
 
+import com.splitnotsowise.exceptions.InvalidArgumentCountException;
 import com.splitnotsowise.communication.Server;
 
 import java.io.PrintWriter;
 
 public class LoginCommand implements Command {
 
+    private static final int INDEX_OF_USERNAME = 1;
+    private static final int INDEX_OF_PASSWORD = 2;
+
     @Override
-    public void execute(String clientUsername, String[] content, Server server, PrintWriter writer) {
-        String[] tokens = content.split(" ");
+    public void execute(String clientUsername, String[] content, Server server, PrintWriter writer) throws InvalidArgumentCountException {
 
-        int index = 0;
-        if (tokens.length == 2) {
-            String username = tokens[index++];
-            String password = tokens[index];
+        if (content.length != 3) {
 
-            if (server.containsUser(username) && server.containsAccount(username, password)) { //TODO something is wrong here
-                System.out.println(username + " logged in");
-                writer.println("Successfully logged in");
-
-                // TODO notifications
-            } else {
-                writer.println("=> wrong username or password (or you are not registered)");
-
-            }
+            throw new InvalidArgumentCountException(clientUsername);
 
         } else {
-            writer.println("=> invalid input");
+
+            String username = content[INDEX_OF_USERNAME];
+            String password = content[INDEX_OF_PASSWORD];
+            if (!server.containsUser(username)){
+                writer.println("You are not registered or your username is not correct");
+            } else if ( !server.isAccountValid(username, password)) {
+                writer.println("Wrong password");
+            }else {
+                    System.out.println(username + " logged in");
+                    writer.println("Successfully logged in");
+                    server.getRegisteredUser(username).printNotifications(writer);
+
+                    // TODO notifications
+            }
+
         }
 
     }
